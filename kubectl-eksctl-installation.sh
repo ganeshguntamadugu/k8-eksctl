@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ $# -eq 0 ]
+then
+    echo -e "$R Please provide aws credentials "Key ID" & "Access Key" $N"
+    exit 1
+fi
+
 # Docker installation
 
 
@@ -35,10 +41,6 @@ aws configure
 KeyID=$1
 AccessKey=$2
 
-if [ $# -eq 0 ]
-then
-    echo -e "$R Please provide aws credentials "Key ID" & "Access Key" $N"
-    exit 1
-fi
+
 
 
