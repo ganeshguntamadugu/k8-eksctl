@@ -1,5 +1,8 @@
 #!/bin/bash
 
+R="\e[31m"
+N="\e[0m"
+
 if [ $# -eq 0 ]
 then
     echo -e "$R Please provide aws credentials "Key ID" & "Access Key" $N"
@@ -8,9 +11,6 @@ fi
 
 # Docker installation
 
-
-R="\e[31m"
-N="\e[0m"
 
 # kubectl installation
 
