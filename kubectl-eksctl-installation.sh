@@ -26,18 +26,18 @@ curl -sLO "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_$
 
 tar -xzf eksctl_$PLATFORM.tar.gz -C /tmp && rm eksctl_$PLATFORM.tar.gz
 sudo mv /tmp/eksctl /usr/local/bin
-
+eksctl version
 
 # Run aws configure
 
 # Give credentials
 aws configure
-AWS_Access_Key_ID=$1
-AWS_Secret_Access_Key=$2
+KeyID=$1
+AccessKey=$2
 
 if [ $# -eq 0 ]
 then
-    echo "$R Please provide aws credentials "Key ID" & "Access Key" $N"
+    echo -e "$R Please provide aws credentials "Key ID" & "Access Key" $N"
     exit 1
 fi
 
